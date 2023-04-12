@@ -40,9 +40,9 @@ class EditMode(QWidget):
         
     def initUI(self, snapshot_array):
         
-        # Need to make this dynamically adjust to user's resolution depending on focused monitor
-        self.disply_width = 1920
-        self.display_height = 1080
+        self.getdisplay = pyautogui.size()
+        self.disply_width = self.getdisplay[0]
+        self.display_height = self.getdisplay[1]
         
         self.image_label = QLabel(self)
         
